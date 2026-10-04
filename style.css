@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    position: fixed;
+    z-index: 999;
+    background: black;
+    opacity: 90%;
+    width: 100%;
+    padding: 15px 10px;
+    top: 0;
+    right: 0;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  nav h1 {
+    color: white;
+    font-weight: 600;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .menu a {
+    color: white;
+    text-decoration: none;
+  }
+  .menu a:hover {
+    color: red;
+  }
+  .beranda {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px;
+    background-image: url(src/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .beranda h1 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+
+  .beranda p {
+    color: rgb(205, 205, 205);
+    font-weight: bold;
+    margin-bottom: 20px;
+
+  }
+  .beranda span {
+    color: cyan;
+  }
+
+  .button {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  }
+  .button a {
+    display: flex;
+    flex-direction: column;
+    background: #c8963e;
+    width: 110px;
+    color: white;
+    padding: 15px 10px;
+    font-size: 15px;
+    border-radius: 12px;
+    text-decoration: none;
+  }
+
+  .button a:hover{
+    background: white;
+    color: black;
+  }
+
+  section {
+    padding: 300px 6%;
+    scroll-margin-top: 100px;
+  }
+
+  .judul {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: 30px;
+  }
+
+  .daftar-buku {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 30px;
+  }
+
+  .kartu-buku {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .kartu-buku:hover {
+    transform: translateY(-20px);
+  }
+
+  .gambar-buku {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gambar-buku img {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .kartu-isi {
+    padding: 20px;
+  }
+
+  .kartu-isi h3 {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .kartu-isi p {
+   margin: 0 0 16px;
+   color: #6b7280;
+  }
+  
+.tentang {
+  width: 100%;
+    padding: 70px 15%;
+    text-align: center;
+    background: #87401c;
+}
+  .tentang h1 {
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: white;
+  }
+  .tentang p {
+    color: hwb(0 100% 0%);;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .sub {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .daftar-ulasan {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .kartu-ulasan {
+    background: white;
+    border: 1px solid #e8e5df;
+    border-radius: 28px;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+    transition: transform .3s ease-in-out;
+  }
+
+  .kartu-ulasan:hover {
+    transform: translateY(-20px);
+  }
+
+  .kartu-ulasan blockquote {
+    font-style: italic;
+    font-size: 1.1em;
+    color: #444;
+  }
+
+  .penulis {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .penulis img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #d0d4ca;
+    flex-shrink: 0;
+  }
+
+  .penulis strong {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 6px;
+  }
+
+  .penulis span {
+    color: #6b6b6b;
+  }
+
+
+  @media (max-width: 768px) {
+    nav h1 {
+        margin-bottom: 10px;
+    }
+    nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .menu {
+        gap: 10px;
+    }
+    .gambar-buku img {
+      width: 90%;
+    }
+    .daftar-buku {
+      grid-template-columns: 1fr;
+    }
+  }
